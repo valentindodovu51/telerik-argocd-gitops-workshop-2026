@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/kdvalkov/telerik-argocd-gitops-workshop-2026
+    repoURL: https://github.com/valentindodovu51/telerik-argocd-gitops-workshop-2026
     targetRevision: HEAD
     path: app
   destination:
