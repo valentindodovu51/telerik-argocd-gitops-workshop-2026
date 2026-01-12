@@ -1,29 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: demo-app
+  name: demo-app-green
   namespace: demo
 spec:
   replicas: 2
-  strategy:
-    type: Recreate
   selector:
     matchLabels:
       app: demo-app
+      version: green
   template:
     metadata:
       labels:
         app: demo-app
+        version: green
     spec:
       containers:
       - name: nginx
         image: nginx:1.26
         ports:
         - containerPort: 80
-        resources:
-          requests:
-            memory: "64Mi"
-            cpu: "100m"
-          limits:
-            memory: "128Mi"
-            cpu: "200m"
