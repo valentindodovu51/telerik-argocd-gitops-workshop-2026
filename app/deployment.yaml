@@ -5,6 +5,8 @@ metadata:
   namespace: demo
 spec:
   replicas: 2
+  strategy:
+    type: Recreate
   selector:
     matchLabels:
       app: demo-app
